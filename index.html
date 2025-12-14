@@ -1,0 +1,29 @@
+<div id="app">
+  <div id="sidebar">
+    <div class="contact active" onclick="switchBot('alex', this)">
+      <img id="alexPhoto" onclick="triggerUpload('alexUpload')" />
+      <span contenteditable="true">Alex</span>
+      <input id="alexUpload" type="file" accept="image/*" hidden />
+    </div>
+
+    <div class="contact" onclick="switchBot('elly', this)">
+      <img id="ellyPhoto" onclick="triggerUpload('ellyUpload')" />
+      <span contenteditable="true">Elly</span>
+      <input id="ellyUpload" type="file" accept="image/*" hidden />
+    </div>
+  </div>
+
+  <div id="chat">
+    <div id="chat-area"></div>
+
+    <div id="input-bar">
+      <input
+        id="message-input"
+        type="text"
+        placeholder="Message…"
+        autocomplete="off"
+      />
+      <button id="send-btn">➤</button>
+    </div>
+  </div>
+</div>

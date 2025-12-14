@@ -1,0 +1,106 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, system-ui;
+  background: #f2f2f7;
+}
+
+#app {
+  max-width: 430px;
+  height: 100vh;
+  margin: auto;
+  display: flex;
+  background: white;
+}
+
+#sidebar {
+  width: 100px;
+  background: #f7f7f7;
+  border-right: 1px solid #ddd;
+}
+
+.contact {
+  padding: 10px;
+  text-align: center;
+  cursor: pointer;
+}
+
+.contact.active {
+  background: #e6e6eb;
+}
+
+.contact img {
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: #ccc;
+  object-fit: cover;
+}
+
+.contact span {
+  display: block;
+  font-size: 12px;
+  margin-top: 4px;
+}
+
+#chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+#chat-area {
+  flex: 1;
+  padding: 12px;
+  overflow-y: auto;
+}
+
+.msg {
+  max-width: 75%;
+  padding: 10px 14px;
+  border-radius: 18px;
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.user {
+  background: #007aff;
+  color: white;
+  margin-left: auto;
+}
+
+.bot {
+  background: #e5e5ea;
+  color: black;
+}
+
+.typing {
+  font-size: 12px;
+  color: gray;
+  margin-bottom: 6px;
+}
+
+#input-bar {
+  display: flex;
+  padding: 10px;
+  border-top: 1px solid #ddd;
+  background: white;
+}
+
+#message-input {
+  flex: 1;
+  padding: 12px;
+  border-radius: 20px;
+  border: 1px solid #ccc;
+  font-size: 14px;
+}
+
+#send-btn {
+  margin-left: 8px;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: none;
+  background: #007aff;
+  color: white;
+  font-size: 18px;
+}
