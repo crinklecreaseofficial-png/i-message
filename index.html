@@ -1,29 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chat App</title>
+
+  <!-- LINK CSS -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
 <div id="app">
+
+  <!-- CONTACT LIST -->
   <div id="sidebar">
     <div class="contact active" onclick="switchBot('alex', this)">
-      <img id="alexPhoto" onclick="triggerUpload('alexUpload')" />
+      <img id="alexPhoto" onclick="openPhoto('alexPhoto')" />
       <span contenteditable="true">Alex</span>
       <input id="alexUpload" type="file" accept="image/*" hidden />
     </div>
 
     <div class="contact" onclick="switchBot('elly', this)">
-      <img id="ellyPhoto" onclick="triggerUpload('ellyUpload')" />
+      <img id="ellyPhoto" onclick="openPhoto('ellyPhoto')" />
       <span contenteditable="true">Elly</span>
       <input id="ellyUpload" type="file" accept="image/*" hidden />
     </div>
   </div>
 
+  <!-- CHAT AREA -->
   <div id="chat">
     <div id="chat-area"></div>
 
     <div id="input-bar">
-      <input
-        id="message-input"
-        type="text"
-        placeholder="Message…"
-        autocomplete="off"
-      />
+      <input id="message-input" type="text" placeholder="Message…" />
       <button id="send-btn">➤</button>
     </div>
   </div>
 </div>
+
+<!-- PHOTO ZOOM MODAL -->
+<div id="photoModal" onclick="closePhoto()">
+  <img id="zoomedPhoto" />
+</div>
+
+<!-- LINK JS -->
+<script src="script.js"></script>
+</body>
+</html>
